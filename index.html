@@ -1,0 +1,1915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Modern Landing Page</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4f46e5',
+                        secondary: '#7c3aed',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(
+                90deg,
+                #4f46e5,
+                #7c3aed,
+                #ec4899
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-bg {
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(99, 102, 241, 0.15),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 80% 30%,
+                    rgba(168, 85, 247, 0.15),
+                    transparent 30%
+                ),
+                #ffffff;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="fixed top-0 left-0 right-0 z-50">
+    <nav class="glass border-b border-gray-200/70">
+        <div class="max-w-7xl mx-auto px-5 lg:px-8">
+            <div class="h-20 flex items-center justify-between">
+
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3">
+
+                    <div class="w-11 h-11 rounded-xl
+                                bg-gradient-to-br from-indigo-600 to-purple-600
+                                flex items-center justify-center
+                                text-white shadow-lg shadow-indigo-200">
+
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+
+                    <div>
+                        <h1 class="font-extrabold text-xl">
+                            Brand<span class="text-indigo-600">X</span>
+                        </h1>
+
+                        <p class="text-[10px] text-gray-500 tracking-widest uppercase">
+                            Digital Solution
+                        </p>
+                    </div>
+
+                </a>
+
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+
+                    <a href="#home"
+                       class="text-sm font-medium text-gray-700 hover:text-indigo-600 transition">
+                        Home
+                    </a>
+
+                    <a href="#about"
+                       class="text-sm font-medium text-gray-700 hover:text-indigo-600 transition">
+                        About
+                    </a>
+
+                    <a href="#services"
+                       class="text-sm font-medium text-gray-700 hover:text-indigo-600 transition">
+                        Services
+                    </a>
+
+                    <a href="#features"
+                       class="text-sm font-medium text-gray-700 hover:text-indigo-600 transition">
+                        Features
+                    </a>
+
+                    <a href="#contact"
+                       class="text-sm font-medium text-gray-700 hover:text-indigo-600 transition">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <!-- Desktop CTA -->
+                <div class="hidden md:block">
+
+                    <a href="#contact"
+                       class="inline-flex items-center gap-2
+                              px-5 py-2.5
+                              bg-indigo-600 hover:bg-indigo-700
+                              text-white text-sm font-semibold
+                              rounded-xl transition shadow-lg shadow-indigo-200">
+
+                        Get Started
+
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- Mobile Button -->
+                <button
+                    id="menuBtn"
+                    class="md:hidden w-10 h-10 rounded-lg
+                           border border-gray-200
+                           flex items-center justify-center">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+        </div>
+
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+             class="hidden md:hidden border-t border-gray-200 bg-white">
+
+            <div class="px-5 py-5 space-y-3">
+
+                <a href="#home"
+                   class="block py-2 font-medium text-gray-700">
+                    Home
+                </a>
+
+                <a href="#about"
+                   class="block py-2 font-medium text-gray-700">
+                    About
+                </a>
+
+                <a href="#services"
+                   class="block py-2 font-medium text-gray-700">
+                    Services
+                </a>
+
+                <a href="#features"
+                   class="block py-2 font-medium text-gray-700">
+                    Features
+                </a>
+
+                <a href="#contact"
+                   class="block py-2 font-medium text-gray-700">
+                    Contact
+                </a>
+
+                <a href="#contact"
+                   class="block text-center
+                          bg-indigo-600 text-white
+                          py-3 rounded-xl font-semibold">
+                    Get Started
+                </a>
+
+            </div>
+        </div>
+
+    </nav>
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section id="home"
+         class="hero-bg min-h-screen
+                pt-32 pb-20
+                flex items-center">
+
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 w-full">
+
+        <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+            <!-- Hero Content -->
+            <div>
+
+                <div class="inline-flex items-center gap-2
+                            px-4 py-2 rounded-full
+                            bg-indigo-50
+                            border border-indigo-100
+                            text-indigo-700
+                            text-sm font-semibold mb-6">
+
+                    <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+
+                    We're building something amazing
+
+                </div>
+
+
+                <h2 class="text-4xl sm:text-5xl lg:text-6xl
+                           font-black leading-tight">
+
+                    Build Your
+
+                    <span class="gradient-text">
+                        Digital Future
+                    </span>
+
+                    With Us.
+
+                </h2>
+
+
+                <p class="mt-6 text-lg text-gray-600
+                          leading-8 max-w-xl">
+
+                    We create modern digital experiences that help
+                    businesses grow, connect with customers and
+                    achieve their goals faster.
+
+                </p>
+
+
+                <!-- Buttons -->
+                <div class="mt-8 flex flex-col sm:flex-row gap-4">
+
+                    <a href="#contact"
+                       class="inline-flex justify-center items-center gap-2
+                              px-7 py-3.5
+                              rounded-xl
+                              bg-indigo-600 hover:bg-indigo-700
+                              text-white font-semibold
+                              shadow-xl shadow-indigo-200
+                              transition">
+
+                        Start Your Project
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <a href="#services"
+                       class="inline-flex justify-center items-center gap-2
+                              px-7 py-3.5
+                              rounded-xl
+                              border border-gray-300
+                              hover:border-indigo-600
+                              hover:text-indigo-600
+                              font-semibold
+                              transition">
+
+                        Explore Services
+
+                        <i class="fa-solid fa-play text-xs"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- Trust -->
+                <div class="mt-10 flex items-center gap-5">
+
+                    <div class="flex -space-x-3">
+
+                        <div class="w-10 h-10 rounded-full
+                                    bg-indigo-200 border-2 border-white
+                                    flex items-center justify-center">
+
+                            <i class="fa-solid fa-user text-indigo-700"></i>
+
+                        </div>
+
+                        <div class="w-10 h-10 rounded-full
+                                    bg-purple-200 border-2 border-white
+                                    flex items-center justify-center">
+
+                            <i class="fa-solid fa-user text-purple-700"></i>
+
+                        </div>
+
+                        <div class="w-10 h-10 rounded-full
+                                    bg-pink-200 border-2 border-white
+                                    flex items-center justify-center">
+
+                            <i class="fa-solid fa-user text-pink-700"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="flex gap-1 text-yellow-400 text-sm">
+                            ★★★★★
+                        </div>
+
+                        <p class="text-sm text-gray-500">
+                            Trusted by 500+ clients
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero Visual -->
+            <div class="relative">
+
+                <!-- Background Shapes -->
+                <div class="absolute -top-10 -right-10
+                            w-72 h-72
+                            bg-purple-200
+                            rounded-full blur-3xl opacity-50">
+                </div>
+
+                <div class="absolute -bottom-10 -left-10
+                            w-72 h-72
+                            bg-indigo-200
+                            rounded-full blur-3xl opacity-50">
+                </div>
+
+
+                <!-- Main Card -->
+                <div class="relative
+                            bg-white
+                            rounded-3xl
+                            border border-gray-200
+                            shadow-2xl
+                            p-6">
+
+                    <!-- Browser Header -->
+                    <div class="flex items-center justify-between mb-6">
+
+                        <div class="flex gap-2">
+
+                            <span class="w-3 h-3 bg-red-400 rounded-full"></span>
+                            <span class="w-3 h-3 bg-yellow-400 rounded-full"></span>
+                            <span class="w-3 h-3 bg-green-400 rounded-full"></span>
+
+                        </div>
+
+                        <div class="text-gray-300">
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Dashboard -->
+                    <div class="grid grid-cols-3 gap-4">
+
+                        <div class="col-span-2
+                                    h-36
+                                    rounded-2xl
+                                    bg-gradient-to-br
+                                    from-indigo-600
+                                    to-purple-600
+                                    p-5 text-white">
+
+                            <p class="text-sm opacity-80">
+                                Total Revenue
+                            </p>
+
+                            <h3 class="text-3xl font-bold mt-3">
+                                $48,290
+                            </h3>
+
+                            <div class="mt-3 text-xs">
+                                ↑ 24.8% this month
+                            </div>
+
+                        </div>
+
+
+                        <div class="h-36
+                                    rounded-2xl
+                                    bg-gray-50
+                                    border border-gray-100
+                                    p-4">
+
+                            <i class="fa-solid fa-users
+                                      text-indigo-600"></i>
+
+                            <p class="text-xs text-gray-500 mt-4">
+                                Customers
+                            </p>
+
+                            <h3 class="text-xl font-bold mt-1">
+                                12.8K
+                            </h3>
+
+                        </div>
+
+
+                        <!-- Chart -->
+                        <div class="col-span-3
+                                    h-52
+                                    rounded-2xl
+                                    bg-gray-50
+                                    border border-gray-100
+                                    p-5">
+
+                            <div class="flex justify-between">
+
+                                <div>
+                                    <p class="text-sm text-gray-500">
+                                        Performance
+                                    </p>
+
+                                    <h3 class="font-bold mt-1">
+                                        Monthly Growth
+                                    </h3>
+                                </div>
+
+                                <span class="text-green-600 text-sm font-semibold">
+                                    +18.4%
+                                </span>
+
+                            </div>
+
+
+                            <div class="mt-8 flex items-end
+                                        justify-between h-24 gap-2">
+
+                                <div class="w-full bg-indigo-200 rounded-t-lg h-[35%]"></div>
+
+                                <div class="w-full bg-indigo-300 rounded-t-lg h-[50%]"></div>
+
+                                <div class="w-full bg-indigo-400 rounded-t-lg h-[42%]"></div>
+
+                                <div class="w-full bg-indigo-500 rounded-t-lg h-[65%]"></div>
+
+                                <div class="w-full bg-indigo-600 rounded-t-lg h-[78%]"></div>
+
+                                <div class="w-full bg-purple-500 rounded-t-lg h-[90%]"></div>
+
+                                <div class="w-full bg-purple-600 rounded-t-lg h-full"></div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Floating Card -->
+                <div class="absolute -left-8 bottom-10
+                            bg-white
+                            border border-gray-100
+                            shadow-xl
+                            rounded-2xl
+                            p-4
+                            hidden sm:flex
+                            items-center gap-3">
+
+                    <div class="w-11 h-11
+                                rounded-xl
+                                bg-green-100
+                                text-green-600
+                                flex items-center justify-center">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                    </div>
+
+                    <div>
+
+                        <p class="text-xs text-gray-500">
+                            Growth Rate
+                        </p>
+
+                        <p class="font-bold">
+                            +32.5%
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     STATS
+========================================================= -->
+
+<section class="py-12 border-y border-gray-100 bg-gray-50">
+
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+            <div>
+                <h3 class="text-3xl font-black text-indigo-600">
+                    500+
+                </h3>
+
+                <p class="text-gray-500 mt-2">
+                    Happy Clients
+                </p>
+            </div>
+
+
+            <div>
+                <h3 class="text-3xl font-black text-indigo-600">
+                    850+
+                </h3>
+
+                <p class="text-gray-500 mt-2">
+                    Projects Completed
+                </p>
+            </div>
+
+
+            <div>
+                <h3 class="text-3xl font-black text-indigo-600">
+                    10+
+                </h3>
+
+                <p class="text-gray-500 mt-2">
+                    Years Experience
+                </p>
+            </div>
+
+
+            <div>
+                <h3 class="text-3xl font-black text-indigo-600">
+                    98%
+                </h3>
+
+                <p class="text-gray-500 mt-2">
+                    Client Satisfaction
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section id="about" class="py-24">
+
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+            <!-- Image Placeholder -->
+            <div class="relative">
+
+                <div class="aspect-square
+                            rounded-3xl
+                            bg-gradient-to-br
+                            from-indigo-600
+                            via-purple-600
+                            to-pink-500
+                            p-1">
+
+                    <div class="w-full h-full
+                                bg-gray-900
+                                rounded-[22px]
+                                flex items-center justify-center">
+
+                        <div class="text-center text-white">
+
+                            <i class="fa-solid fa-code text-6xl
+                                      text-indigo-400"></i>
+
+                            <h3 class="text-2xl font-bold mt-6">
+                                Creative Digital Solutions
+                            </h3>
+
+                            <p class="text-gray-400 mt-2">
+                                Design • Development • Growth
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Experience Card -->
+                <div class="absolute
+                            -bottom-6 -right-6
+                            bg-white
+                            shadow-xl
+                            border border-gray-100
+                            rounded-2xl
+                            p-5">
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="w-12 h-12 rounded-xl
+                                    bg-indigo-100
+                                    text-indigo-600
+                                    flex items-center justify-center">
+
+                            <i class="fa-solid fa-award text-xl"></i>
+
+                        </div>
+
+                        <div>
+
+                            <p class="text-2xl font-black">
+                                10+
+                            </p>
+
+                            <p class="text-xs text-gray-500">
+                                Years Experience
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Content -->
+            <div>
+
+                <span class="text-indigo-600 font-bold uppercase
+                             text-sm tracking-widest">
+                    About Us
+                </span>
+
+                <h2 class="text-4xl font-black mt-4 leading-tight">
+
+                    We Turn Ideas Into
+                    <span class="gradient-text">
+                        Digital Reality
+                    </span>
+
+                </h2>
+
+                <p class="mt-6 text-gray-600 leading-8">
+
+                    We are a team of passionate designers, developers
+                    and digital strategists focused on creating
+                    meaningful digital experiences.
+
+                </p>
+
+                <p class="mt-4 text-gray-600 leading-8">
+
+                    From strategy and design to development and
+                    optimization, we provide everything you need
+                    to build and grow your digital presence.
+
+                </p>
+
+
+                <!-- Features -->
+                <div class="mt-8 space-y-4">
+
+                    <div class="flex items-center gap-4">
+
+                        <div class="w-9 h-9 rounded-full
+                                    bg-green-100
+                                    text-green-600
+                                    flex items-center justify-center">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </div>
+
+                        <span class="font-semibold">
+                            Modern & Responsive Design
+                        </span>
+
+                    </div>
+
+
+                    <div class="flex items-center gap-4">
+
+                        <div class="w-9 h-9 rounded-full
+                                    bg-green-100
+                                    text-green-600
+                                    flex items-center justify-center">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </div>
+
+                        <span class="font-semibold">
+                            High Performance Development
+                        </span>
+
+                    </div>
+
+
+                    <div class="flex items-center gap-4">
+
+                        <div class="w-9 h-9 rounded-full
+                                    bg-green-100
+                                    text-green-600
+                                    flex items-center justify-center">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </div>
+
+                        <span class="font-semibold">
+                            Result-Oriented Digital Strategy
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a href="#contact"
+                   class="inline-flex items-center gap-2
+                          mt-8
+                          px-6 py-3
+                          bg-gray-900 hover:bg-indigo-600
+                          text-white
+                          rounded-xl
+                          font-semibold
+                          transition">
+
+                    Learn More
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section id="services"
+         class="py-24 bg-gray-50">
+
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+        <!-- Heading -->
+        <div class="text-center max-w-2xl mx-auto">
+
+            <span class="text-indigo-600 font-bold uppercase
+                         text-sm tracking-widest">
+                Our Services
+            </span>
+
+            <h2 class="text-4xl font-black mt-4">
+                Everything You Need To
+                <span class="gradient-text">
+                    Grow Online
+                </span>
+            </h2>
+
+            <p class="text-gray-600 mt-5 leading-7">
+                Powerful digital solutions designed to help your
+                business grow faster.
+            </p>
+
+        </div>
+
+
+        <!-- Cards -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
+
+
+            <!-- Card -->
+            <div class="group bg-white
+                        rounded-2xl
+                        p-7
+                        border border-gray-100
+                        hover:border-indigo-200
+                        hover:-translate-y-2
+                        hover:shadow-xl
+                        transition duration-300">
+
+                <div class="w-14 h-14
+                            rounded-2xl
+                            bg-indigo-100
+                            text-indigo-600
+                            flex items-center justify-center
+                            text-xl
+                            group-hover:bg-indigo-600
+                            group-hover:text-white
+                            transition">
+
+                    <i class="fa-solid fa-laptop-code"></i>
+
+                </div>
+
+                <h3 class="text-xl font-bold mt-6">
+                    Web Development
+                </h3>
+
+                <p class="text-gray-500 mt-3 leading-7">
+                    Fast, secure and scalable websites built with
+                    modern technologies.
+                </p>
+
+                <a href="#contact"
+                   class="inline-flex items-center gap-2
+                          mt-5
+                          text-indigo-600
+                          font-semibold">
+
+                    Learn More
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- Card -->
+            <div class="group bg-white
+                        rounded-2xl
+                        p-7
+                        border border-gray-100
+                        hover:border-indigo-200
+                        hover:-translate-y-2
+                        hover:shadow-xl
+                        transition duration-300">
+
+                <div class="w-14 h-14
+                            rounded-2xl
+                            bg-purple-100
+                            text-purple-600
+                            flex items-center justify-center
+                            text-xl
+                            group-hover:bg-purple-600
+                            group-hover:text-white
+                            transition">
+
+                    <i class="fa-solid fa-pen-ruler"></i>
+
+                </div>
+
+                <h3 class="text-xl font-bold mt-6">
+                    UI/UX Design
+                </h3>
+
+                <p class="text-gray-500 mt-3 leading-7">
+                    Beautiful and intuitive interfaces designed
+                    around your users.
+                </p>
+
+                <a href="#contact"
+                   class="inline-flex items-center gap-2
+                          mt-5
+                          text-purple-600
+                          font-semibold">
+
+                    Learn More
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- Card -->
+            <div class="group bg-white
+                        rounded-2xl
+                        p-7
+                        border border-gray-100
+                        hover:border-indigo-200
+                        hover:-translate-y-2
+                        hover:shadow-xl
+                        transition duration-300">
+
+                <div class="w-14 h-14
+                            rounded-2xl
+                            bg-pink-100
+                            text-pink-600
+                            flex items-center justify-center
+                            text-xl
+                            group-hover:bg-pink-600
+                            group-hover:text-white
+                            transition">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <h3 class="text-xl font-bold mt-6">
+                    Digital Marketing
+                </h3>
+
+                <p class="text-gray-500 mt-3 leading-7">
+                    Data-driven marketing strategies that increase
+                    traffic and conversions.
+                </p>
+
+                <a href="#contact"
+                   class="inline-flex items-center gap-2
+                          mt-5
+                          text-pink-600
+                          font-semibold">
+
+                    Learn More
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- Card -->
+            <div class="group bg-white
+                        rounded-2xl
+                        p-7
+                        border border-gray-100
+                        hover:border-indigo-200
+                        hover:-translate-y-2
+                        hover:shadow-xl
+                        transition duration-300">
+
+                <div class="w-14 h-14
+                            rounded-2xl
+                            bg-blue-100
+                            text-blue-600
+                            flex items-center justify-center
+                            text-xl
+                            group-hover:bg-blue-600
+                            group-hover:text-white
+                            transition">
+
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+
+                </div>
+
+                <h3 class="text-xl font-bold mt-6">
+                    Mobile Solutions
+                </h3>
+
+                <p class="text-gray-500 mt-3 leading-7">
+                    Mobile-first digital products that work
+                    beautifully on every device.
+                </p>
+
+                <a href="#contact"
+                   class="inline-flex items-center gap-2
+                          mt-5
+                          text-blue-600
+                          font-semibold">
+
+                    Learn More
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- Card -->
+            <div class="group bg-white
+                        rounded-2xl
+                        p-7
+                        border border-gray-100
+                        hover:border-indigo-200
+                        hover:-translate-y-2
+                        hover:shadow-xl
+                        transition duration-300">
+
+                <div class="w-14 h-14
+                            rounded-2xl
+                            bg-orange-100
+                            text-orange-600
+                            flex items-center justify-center
+                            text-xl
+                            group-hover:bg-orange-600
+                            group-hover:text-white
+                            transition">
+
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+
+                </div>
+
+                <h3 class="text-xl font-bold mt-6">
+                    SEO Optimization
+                </h3>
+
+                <p class="text-gray-500 mt-3 leading-7">
+                    Improve your search rankings and attract more
+                    qualified visitors.
+                </p>
+
+                <a href="#contact"
+                   class="inline-flex items-center gap-2
+                          mt-5
+                          text-orange-600
+                          font-semibold">
+
+                    Learn More
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- Card -->
+            <div class="group bg-white
+                        rounded-2xl
+                        p-7
+                        border border-gray-100
+                        hover:border-indigo-200
+                        hover:-translate-y-2
+                        hover:shadow-xl
+                        transition duration-300">
+
+                <div class="w-14 h-14
+                            rounded-2xl
+                            bg-green-100
+                            text-green-600
+                            flex items-center justify-center
+                            text-xl
+                            group-hover:bg-green-600
+                            group-hover:text-white
+                            transition">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                </div>
+
+                <h3 class="text-xl font-bold mt-6">
+                    Support & Maintenance
+                </h3>
+
+                <p class="text-gray-500 mt-3 leading-7">
+                    Reliable support and maintenance to keep your
+                    digital products running.
+                </p>
+
+                <a href="#contact"
+                   class="inline-flex items-center gap-2
+                          mt-5
+                          text-green-600
+                          font-semibold">
+
+                    Learn More
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FEATURES
+========================================================= -->
+
+<section id="features" class="py-24">
+
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+            <div>
+
+                <span class="text-indigo-600 font-bold uppercase
+                             text-sm tracking-widest">
+                    Why Choose Us
+                </span>
+
+                <h2 class="text-4xl font-black mt-4 leading-tight">
+                    We Focus On
+                    <span class="gradient-text">
+                        Results
+                    </span>
+                    Not Just Design
+                </h2>
+
+                <p class="text-gray-600 mt-6 leading-8">
+                    Every project we build is focused on performance,
+                    usability and measurable business results.
+                </p>
+
+
+                <div class="mt-8 space-y-6">
+
+                    <div class="flex gap-4">
+
+                        <div class="w-12 h-12 shrink-0
+                                    rounded-xl
+                                    bg-indigo-100
+                                    text-indigo-600
+                                    flex items-center justify-center">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3 class="font-bold text-lg">
+                                Lightning Fast
+                            </h3>
+
+                            <p class="text-gray-500 mt-1">
+                                Optimized for speed and performance
+                                across all devices.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex gap-4">
+
+                        <div class="w-12 h-12 shrink-0
+                                    rounded-xl
+                                    bg-purple-100
+                                    text-purple-600
+                                    flex items-center justify-center">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3 class="font-bold text-lg">
+                                Secure & Reliable
+                            </h3>
+
+                            <p class="text-gray-500 mt-1">
+                                Built with security and reliability
+                                from the ground up.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="flex gap-4">
+
+                        <div class="w-12 h-12 shrink-0
+                                    rounded-xl
+                                    bg-pink-100
+                                    text-pink-600
+                                    flex items-center justify-center">
+
+                            <i class="fa-solid fa-heart"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3 class="font-bold text-lg">
+                                User Focused
+                            </h3>
+
+                            <p class="text-gray-500 mt-1">
+                                Designed to provide an excellent
+                                user experience.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Feature Visual -->
+            <div class="bg-gray-900 rounded-3xl p-8">
+
+                <div class="grid grid-cols-2 gap-5">
+
+                    <div class="bg-white/10 rounded-2xl p-6">
+
+                        <i class="fa-solid fa-gauge-high
+                                  text-3xl text-indigo-400"></i>
+
+                        <h3 class="text-white font-bold mt-5">
+                            Performance
+                        </h3>
+
+                        <p class="text-gray-400 text-sm mt-2">
+                            99.9% uptime
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-white/10 rounded-2xl p-6">
+
+                        <i class="fa-solid fa-lock
+                                  text-3xl text-purple-400"></i>
+
+                        <h3 class="text-white font-bold mt-5">
+                            Security
+                        </h3>
+
+                        <p class="text-gray-400 text-sm mt-2">
+                            Enterprise grade
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-white/10 rounded-2xl p-6">
+
+                        <i class="fa-solid fa-mobile
+                                  text-3xl text-pink-400"></i>
+
+                        <h3 class="text-white font-bold mt-5">
+                            Responsive
+                        </h3>
+
+                        <p class="text-gray-400 text-sm mt-2">
+                            Every device
+                        </p>
+
+                    </div>
+
+
+                    <div class="bg-white/10 rounded-2xl p-6">
+
+                        <i class="fa-solid fa-chart-simple
+                                  text-3xl text-green-400"></i>
+
+                        <h3 class="text-white font-bold mt-5">
+                            Analytics
+                        </h3>
+
+                        <p class="text-gray-400 text-sm mt-2">
+                            Data driven
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mt-5 bg-white/10 rounded-2xl p-6">
+
+                    <div class="flex justify-between">
+
+                        <div>
+
+                            <p class="text-gray-400 text-sm">
+                                Overall Performance
+                            </p>
+
+                            <h3 class="text-white text-3xl font-black mt-2">
+                                94.8%
+                            </h3>
+
+                        </div>
+
+                        <div class="text-green-400">
+                            +12.5%
+                        </div>
+
+                    </div>
+
+                    <div class="mt-5 h-3 bg-white/10 rounded-full">
+
+                        <div class="h-full w-[95%]
+                                    bg-gradient-to-r
+                                    from-indigo-500
+                                    to-purple-500
+                                    rounded-full">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     TESTIMONIAL
+========================================================= -->
+
+<section class="py-24 bg-gray-50">
+
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+        <div class="text-center">
+
+            <span class="text-indigo-600 font-bold uppercase
+                         text-sm tracking-widest">
+                Testimonials
+            </span>
+
+            <h2 class="text-4xl font-black mt-4">
+                What Our Clients Say
+            </h2>
+
+        </div>
+
+
+        <div class="grid md:grid-cols-3 gap-6 mt-14">
+
+
+            <div class="bg-white rounded-2xl p-7 border border-gray-100">
+
+                <div class="text-yellow-400">
+                    ★★★★★
+                </div>
+
+                <p class="text-gray-600 leading-7 mt-5">
+                    "Amazing service and great communication.
+                    They completely transformed our online presence."
+                </p>
+
+                <div class="flex items-center gap-3 mt-6">
+
+                    <div class="w-11 h-11 rounded-full
+                                bg-indigo-100
+                                text-indigo-600
+                                flex items-center justify-center">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4 class="font-bold">
+                            John Smith
+                        </h4>
+
+                        <p class="text-xs text-gray-500">
+                            Business Owner
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="bg-white rounded-2xl p-7 border border-gray-100">
+
+                <div class="text-yellow-400">
+                    ★★★★★
+                </div>
+
+                <p class="text-gray-600 leading-7 mt-5">
+                    "Professional, creative and extremely responsive.
+                    Highly recommended for any digital project."
+                </p>
+
+                <div class="flex items-center gap-3 mt-6">
+
+                    <div class="w-11 h-11 rounded-full
+                                bg-purple-100
+                                text-purple-600
+                                flex items-center justify-center">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4 class="font-bold">
+                            Sarah Wilson
+                        </h4>
+
+                        <p class="text-xs text-gray-500">
+                            CEO, Tech Company
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="bg-white rounded-2xl p-7 border border-gray-100">
+
+                <div class="text-yellow-400">
+                    ★★★★★
+                </div>
+
+                <p class="text-gray-600 leading-7 mt-5">
+                    "Our website performance and conversions improved
+                    significantly after working with this team."
+                </p>
+
+                <div class="flex items-center gap-3 mt-6">
+
+                    <div class="w-11 h-11 rounded-full
+                                bg-pink-100
+                                text-pink-600
+                                flex items-center justify-center">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h4 class="font-bold">
+                            Michael Brown
+                        </h4>
+
+                        <p class="text-xs text-gray-500">
+                            Marketing Director
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section id="contact" class="py-24">
+
+    <div class="max-w-6xl mx-auto px-5 lg:px-8">
+
+        <div class="relative overflow-hidden
+                    rounded-3xl
+                    bg-gradient-to-br
+                    from-indigo-600
+                    via-purple-600
+                    to-pink-600
+                    p-10 md:p-16
+                    text-center">
+
+            <!-- Background -->
+            <div class="absolute -top-20 -left-20
+                        w-72 h-72
+                        bg-white/10
+                        rounded-full blur-3xl">
+            </div>
+
+            <div class="absolute -bottom-20 -right-20
+                        w-72 h-72
+                        bg-white/10
+                        rounded-full blur-3xl">
+            </div>
+
+
+            <div class="relative">
+
+                <span class="text-white/80
+                             uppercase tracking-widest
+                             text-sm font-bold">
+                    Let's Work Together
+                </span>
+
+                <h2 class="text-4xl md:text-5xl
+                           font-black text-white
+                           mt-4">
+
+                    Ready To Start Your
+                    <br class="hidden md:block">
+                    Next Project?
+
+                </h2>
+
+                <p class="text-white/80
+                          max-w-2xl mx-auto
+                          mt-5 leading-7">
+
+                    Let's turn your idea into a powerful digital
+                    experience that drives real results.
+
+                </p>
+
+
+                <div class="mt-8 flex flex-col sm:flex-row
+                            justify-center gap-4">
+
+                    <a href="mailto:hello@example.com"
+                       class="px-7 py-3.5
+                              bg-white
+                              text-indigo-700
+                              rounded-xl
+                              font-bold
+                              hover:bg-gray-100
+                              transition">
+
+                        Contact Us
+
+                    </a>
+
+
+                    <a href="tel:+8801000000000"
+                       class="px-7 py-3.5
+                              border border-white/40
+                              text-white
+                              rounded-xl
+                              font-bold
+                              hover:bg-white/10
+                              transition">
+
+                        <i class="fa-solid fa-phone mr-2"></i>
+
+                        Call Now
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="bg-gray-950 text-white">
+
+    <div class="max-w-7xl mx-auto
+                px-5 lg:px-8
+                py-14">
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+            <!-- Brand -->
+            <div>
+
+                <a href="#"
+                   class="flex items-center gap-3">
+
+                    <div class="w-10 h-10 rounded-xl
+                                bg-indigo-600
+                                flex items-center justify-center">
+
+                        <i class="fa-solid fa-rocket"></i>
+
+                    </div>
+
+                    <span class="text-xl font-bold">
+                        BrandX
+                    </span>
+
+                </a>
+
+                <p class="text-gray-400
+                          leading-7
+                          mt-5">
+
+                    Creating powerful digital experiences
+                    for modern businesses.
+
+                </p>
+
+
+                <div class="flex gap-3 mt-6">
+
+                    <a href="#"
+                       class="w-10 h-10
+                              rounded-lg
+                              bg-white/10
+                              hover:bg-indigo-600
+                              flex items-center justify-center
+                              transition">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+                    <a href="#"
+                       class="w-10 h-10
+                              rounded-lg
+                              bg-white/10
+                              hover:bg-indigo-600
+                              flex items-center justify-center
+                              transition">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a href="#"
+                       class="w-10 h-10
+                              rounded-lg
+                              bg-white/10
+                              hover:bg-indigo-600
+                              flex items-center justify-center
+                              transition">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+                    <a href="#"
+                       class="w-10 h-10
+                              rounded-lg
+                              bg-white/10
+                              hover:bg-indigo-600
+                              flex items-center justify-center
+                              transition">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Company -->
+            <div>
+
+                <h3 class="font-bold text-lg">
+                    Company
+                </h3>
+
+                <ul class="mt-5 space-y-3 text-gray-400">
+
+                    <li>
+                        <a href="#about"
+                           class="hover:text-white transition">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services"
+                           class="hover:text-white transition">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#features"
+                           class="hover:text-white transition">
+                            Features
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#contact"
+                           class="hover:text-white transition">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Services -->
+            <div>
+
+                <h3 class="font-bold text-lg">
+                    Services
+                </h3>
+
+                <ul class="mt-5 space-y-3 text-gray-400">
+
+                    <li>Web Development</li>
+                    <li>UI/UX Design</li>
+                    <li>Digital Marketing</li>
+                    <li>SEO Optimization</li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Contact -->
+            <div>
+
+                <h3 class="font-bold text-lg">
+                    Contact
+                </h3>
+
+                <ul class="mt-5 space-y-4 text-gray-400">
+
+                    <li class="flex gap-3">
+
+                        <i class="fa-solid fa-location-dot
+                                  text-indigo-400 mt-1"></i>
+
+                        <span>
+                            Dhaka, Bangladesh
+                        </span>
+
+                    </li>
+
+                    <li class="flex gap-3">
+
+                        <i class="fa-solid fa-envelope
+                                  text-indigo-400 mt-1"></i>
+
+                        <span>
+                            hello@example.com
+                        </span>
+
+                    </li>
+
+                    <li class="flex gap-3">
+
+                        <i class="fa-solid fa-phone
+                                  text-indigo-400 mt-1"></i>
+
+                        <span>
+                            +880 1000 000000
+                        </span>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bottom -->
+        <div class="border-t border-white/10
+                    mt-12 pt-7
+                    flex flex-col md:flex-row
+                    justify-between
+                    gap-4
+                    text-sm text-gray-500">
+
+            <p>
+                © 2026 BrandX. All rights reserved.
+            </p>
+
+            <div class="flex gap-6">
+
+                <a href="#" class="hover:text-white">
+                    Privacy Policy
+                </a>
+
+                <a href="#" class="hover:text-white">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+
+        mobileMenu.classList.toggle('hidden');
+
+        const icon = menuBtn.querySelector('i');
+
+        if (mobileMenu.classList.contains('hidden')) {
+
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+
+        } else {
+
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-xmark');
+
+        }
+
+    });
+
+
+    // Close mobile menu after clicking link
+
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+
+        link.addEventListener('click', () => {
+
+            mobileMenu.classList.add('hidden');
+
+            const icon = menuBtn.querySelector('i');
+
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
