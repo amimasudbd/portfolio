@@ -1,0 +1,2294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us - BrandX</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4f46e5',
+                        secondary: '#7c3aed',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(
+                90deg,
+                #4f46e5,
+                #7c3aed,
+                #ec4899
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-bg {
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    rgba(99, 102, 241, 0.15),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 80% 30%,
+                    rgba(168, 85, 247, 0.15),
+                    transparent 30%
+                ),
+                #ffffff;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.80);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+    </style>
+</head>
+
+
+<body class="bg-white text-gray-900">
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="fixed top-0 left-0 right-0 z-50">
+
+    <nav class="glass border-b border-gray-200/70">
+
+        <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+            <div class="h-20 flex items-center justify-between">
+
+
+                <!-- Logo -->
+
+                <a href="index.html"
+                   class="flex items-center gap-3">
+
+                    <div class="w-11 h-11
+                                rounded-xl
+                                bg-gradient-to-br
+                                from-indigo-600
+                                to-purple-600
+                                flex items-center justify-center
+                                text-white
+                                shadow-lg
+                                shadow-indigo-200">
+
+                        <i class="fa-solid fa-rocket"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h1 class="font-extrabold text-xl">
+                            Brand<span class="text-indigo-600">X</span>
+                        </h1>
+
+                        <p class="text-[10px]
+                                  text-gray-500
+                                  tracking-widest
+                                  uppercase">
+
+                            Digital Solution
+
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <!-- Desktop Menu -->
+
+                <div class="hidden md:flex items-center gap-8">
+
+                    <a href="index.html"
+                       class="text-sm font-medium
+                              text-gray-700
+                              hover:text-indigo-600
+                              transition">
+
+                        Home
+
+                    </a>
+
+
+                    <a href="about.html"
+                       class="text-sm font-semibold
+                              text-indigo-600">
+
+                        About
+
+                    </a>
+
+
+                    <a href="#mission"
+                       class="text-sm font-medium
+                              text-gray-700
+                              hover:text-indigo-600
+                              transition">
+
+                        Mission
+
+                    </a>
+
+
+                    <a href="#values"
+                       class="text-sm font-medium
+                              text-gray-700
+                              hover:text-indigo-600
+                              transition">
+
+                        Values
+
+                    </a>
+
+
+                    <a href="#team"
+                       class="text-sm font-medium
+                              text-gray-700
+                              hover:text-indigo-600
+                              transition">
+
+                        Team
+
+                    </a>
+
+                </div>
+
+
+                <!-- CTA -->
+
+                <div class="hidden md:block">
+
+                    <a href="index.html#contact"
+                       class="inline-flex
+                              items-center
+                              gap-2
+                              px-5 py-2.5
+                              bg-indigo-600
+                              hover:bg-indigo-700
+                              text-white
+                              text-sm
+                              font-semibold
+                              rounded-xl
+                              transition
+                              shadow-lg
+                              shadow-indigo-200">
+
+                        Get Started
+
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+
+                    </a>
+
+                </div>
+
+
+                <!-- Mobile Menu Button -->
+
+                <button id="menuBtn"
+                        class="md:hidden
+                               w-10 h-10
+                               rounded-lg
+                               border border-gray-200
+                               flex items-center
+                               justify-center">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Mobile Menu -->
+
+        <div id="mobileMenu"
+             class="hidden
+                    md:hidden
+                    border-t
+                    border-gray-200
+                    bg-white">
+
+            <div class="px-5 py-5 space-y-3">
+
+                <a href="index.html"
+                   class="block py-2
+                          font-medium
+                          text-gray-700">
+
+                    Home
+
+                </a>
+
+
+                <a href="about.html"
+                   class="block py-2
+                          font-semibold
+                          text-indigo-600">
+
+                    About
+
+                </a>
+
+
+                <a href="#mission"
+                   class="block py-2
+                          font-medium
+                          text-gray-700">
+
+                    Mission
+
+                </a>
+
+
+                <a href="#values"
+                   class="block py-2
+                          font-medium
+                          text-gray-700">
+
+                    Values
+
+                </a>
+
+
+                <a href="#team"
+                   class="block py-2
+                          font-medium
+                          text-gray-700">
+
+                    Team
+
+                </a>
+
+
+                <a href="index.html#contact"
+                   class="block
+                          text-center
+                          bg-indigo-600
+                          text-white
+                          py-3
+                          rounded-xl
+                          font-semibold">
+
+                    Get Started
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================================
+     PAGE HERO
+========================================================= -->
+
+<section class="hero-bg
+                pt-36
+                pb-24">
+
+    <div class="max-w-7xl
+                mx-auto
+                px-5
+                lg:px-8">
+
+        <div class="text-center max-w-3xl mx-auto">
+
+
+            <!-- Breadcrumb -->
+
+            <div class="flex justify-center
+                        items-center
+                        gap-2
+                        text-sm
+                        text-gray-500
+                        mb-6">
+
+                <a href="index.html"
+                   class="hover:text-indigo-600">
+
+                    Home
+
+                </a>
+
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+
+                <span class="text-indigo-600">
+                    About Us
+                </span>
+
+            </div>
+
+
+            <span class="inline-block
+                         px-4 py-2
+                         bg-indigo-50
+                         border border-indigo-100
+                         rounded-full
+                         text-indigo-600
+                         text-sm
+                         font-semibold">
+
+                Who We Are
+
+            </span>
+
+
+            <h1 class="text-4xl
+                       sm:text-5xl
+                       lg:text-6xl
+                       font-black
+                       leading-tight
+                       mt-6">
+
+                We Build Ideas Into
+
+                <span class="gradient-text">
+                    Digital Success
+                </span>
+
+            </h1>
+
+
+            <p class="mt-6
+                      text-lg
+                      text-gray-600
+                      leading-8">
+
+                We are a passionate team of designers, developers
+                and digital strategists helping businesses create
+                meaningful digital experiences.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ABOUT INTRO
+========================================================= -->
+
+<section class="py-24">
+
+    <div class="max-w-7xl
+                mx-auto
+                px-5
+                lg:px-8">
+
+        <div class="grid
+                    lg:grid-cols-2
+                    gap-16
+                    items-center">
+
+
+            <!-- Visual -->
+
+            <div class="relative">
+
+
+                <!-- Main Image Box -->
+
+                <div class="relative
+                            aspect-[4/3]
+                            rounded-3xl
+                            overflow-hidden
+                            bg-gray-900">
+
+                    <div class="absolute
+                                inset-0
+                                bg-gradient-to-br
+                                from-indigo-600
+                                via-purple-600
+                                to-pink-600
+                                opacity-90">
+                    </div>
+
+
+                    <div class="absolute
+                                inset-0
+                                flex
+                                items-center
+                                justify-center">
+
+                        <div class="text-center text-white">
+
+                            <div class="w-24 h-24
+                                        mx-auto
+                                        rounded-3xl
+                                        bg-white/10
+                                        border border-white/20
+                                        flex
+                                        items-center
+                                        justify-center">
+
+                                <i class="fa-solid
+                                          fa-users
+                                          text-4xl">
+                                </i>
+
+                            </div>
+
+
+                            <h3 class="text-3xl
+                                       font-black
+                                       mt-6">
+
+                                Creative Minds
+
+                            </h3>
+
+
+                            <p class="text-white/70
+                                      mt-2">
+
+                                Building the future together
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Floating Card -->
+
+                <div class="absolute
+                            -bottom-7
+                            -right-5
+                            sm:right-5
+                            bg-white
+                            rounded-2xl
+                            shadow-2xl
+                            border
+                            border-gray-100
+                            p-5">
+
+                    <div class="flex
+                                items-center
+                                gap-4">
+
+                        <div class="w-12 h-12
+                                    rounded-xl
+                                    bg-indigo-100
+                                    text-indigo-600
+                                    flex
+                                    items-center
+                                    justify-center">
+
+                            <i class="fa-solid fa-award text-xl"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3 class="text-2xl
+                                       font-black">
+
+                                10+
+
+                            </h3>
+
+                            <p class="text-xs
+                                      text-gray-500">
+
+                                Years Experience
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Content -->
+
+            <div>
+
+                <span class="text-indigo-600
+                             font-bold
+                             uppercase
+                             text-sm
+                             tracking-widest">
+
+                    About BrandX
+
+                </span>
+
+
+                <h2 class="text-4xl
+                           font-black
+                           leading-tight
+                           mt-4">
+
+                    Your Success Is
+
+                    <span class="gradient-text">
+                        Our Mission
+                    </span>
+
+                </h2>
+
+
+                <p class="mt-6
+                          text-gray-600
+                          leading-8">
+
+                    BrandX is a digital solutions company focused
+                    on helping businesses build strong and memorable
+                    digital identities.
+
+                </p>
+
+
+                <p class="mt-4
+                          text-gray-600
+                          leading-8">
+
+                    We combine creativity, technology and strategy
+                    to create websites, digital products and
+                    marketing campaigns that deliver measurable
+                    results.
+
+                </p>
+
+
+                <!-- Checklist -->
+
+                <div class="mt-8
+                            grid
+                            sm:grid-cols-2
+                            gap-4">
+
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="w-9 h-9
+                                    rounded-full
+                                    bg-green-100
+                                    text-green-600
+                                    flex
+                                    items-center
+                                    justify-center">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </div>
+
+                        <span class="font-semibold">
+                            Expert Team
+                        </span>
+
+                    </div>
+
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="w-9 h-9
+                                    rounded-full
+                                    bg-green-100
+                                    text-green-600
+                                    flex
+                                    items-center
+                                    justify-center">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </div>
+
+                        <span class="font-semibold">
+                            Modern Technology
+                        </span>
+
+                    </div>
+
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="w-9 h-9
+                                    rounded-full
+                                    bg-green-100
+                                    text-green-600
+                                    flex
+                                    items-center
+                                    justify-center">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </div>
+
+                        <span class="font-semibold">
+                            Quality First
+                        </span>
+
+                    </div>
+
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="w-9 h-9
+                                    rounded-full
+                                    bg-green-100
+                                    text-green-600
+                                    flex
+                                    items-center
+                                    justify-center">
+
+                            <i class="fa-solid fa-check"></i>
+
+                        </div>
+
+                        <span class="font-semibold">
+                            Long-Term Support
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a href="index.html#contact"
+                   class="inline-flex
+                          items-center
+                          gap-2
+                          mt-8
+                          px-6 py-3
+                          bg-gray-900
+                          hover:bg-indigo-600
+                          text-white
+                          rounded-xl
+                          font-semibold
+                          transition">
+
+                    Work With Us
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     STATS
+========================================================= -->
+
+<section class="py-16
+                bg-gray-950
+                text-white">
+
+    <div class="max-w-7xl
+                mx-auto
+                px-5
+                lg:px-8">
+
+        <div class="grid
+                    grid-cols-2
+                    md:grid-cols-4
+                    gap-8
+                    text-center">
+
+
+            <div>
+
+                <h3 class="text-4xl
+                           font-black">
+
+                    500+
+
+                </h3>
+
+                <p class="text-gray-400 mt-2">
+                    Happy Clients
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3 class="text-4xl
+                           font-black">
+
+                    850+
+
+                </h3>
+
+                <p class="text-gray-400 mt-2">
+                    Projects Completed
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3 class="text-4xl
+                           font-black">
+
+                    10+
+
+                </h3>
+
+                <p class="text-gray-400 mt-2">
+                    Years Experience
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3 class="text-4xl
+                           font-black">
+
+                    98%
+
+                </h3>
+
+                <p class="text-gray-400 mt-2">
+                    Client Satisfaction
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MISSION & VISION
+========================================================= -->
+
+<section id="mission"
+         class="py-24">
+
+    <div class="max-w-7xl
+                mx-auto
+                px-5
+                lg:px-8">
+
+        <div class="text-center
+                    max-w-2xl
+                    mx-auto">
+
+            <span class="text-indigo-600
+                         font-bold
+                         uppercase
+                         text-sm
+                         tracking-widest">
+
+                Our Purpose
+
+            </span>
+
+
+            <h2 class="text-4xl
+                       font-black
+                       mt-4">
+
+                Mission & Vision
+
+            </h2>
+
+
+            <p class="text-gray-600
+                      mt-5
+                      leading-7">
+
+                We believe technology should make businesses
+                simpler, stronger and more successful.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="grid
+                    md:grid-cols-2
+                    gap-7
+                    mt-14">
+
+
+            <!-- Mission -->
+
+            <div class="relative
+                        overflow-hidden
+                        rounded-3xl
+                        bg-gradient-to-br
+                        from-indigo-600
+                        to-purple-700
+                        p-8
+                        md:p-10
+                        text-white">
+
+                <div class="absolute
+                            -right-16
+                            -top-16
+                            w-48
+                            h-48
+                            rounded-full
+                            bg-white/10">
+                </div>
+
+
+                <div class="relative">
+
+                    <div class="w-16 h-16
+                                rounded-2xl
+                                bg-white/10
+                                flex
+                                items-center
+                                justify-center
+                                text-2xl">
+
+                        <i class="fa-solid fa-bullseye"></i>
+
+                    </div>
+
+
+                    <h3 class="text-2xl
+                               font-black
+                               mt-7">
+
+                        Our Mission
+
+                    </h3>
+
+
+                    <p class="text-white/80
+                              leading-8
+                              mt-4">
+
+                        Our mission is to provide innovative,
+                        accessible and result-driven digital
+                        solutions that help businesses compete
+                        and grow in a rapidly changing world.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Vision -->
+
+            <div class="rounded-3xl
+                        bg-gray-50
+                        border
+                        border-gray-100
+                        p-8
+                        md:p-10">
+
+                <div class="w-16 h-16
+                            rounded-2xl
+                            bg-purple-100
+                            text-purple-600
+                            flex
+                            items-center
+                            justify-center
+                            text-2xl">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                </div>
+
+
+                <h3 class="text-2xl
+                           font-black
+                           mt-7">
+
+                    Our Vision
+
+                </h3>
+
+
+                <p class="text-gray-600
+                          leading-8
+                          mt-4">
+
+                    Our vision is to become a trusted digital
+                    technology partner for businesses worldwide,
+                    creating solutions that make a lasting impact.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     VALUES
+========================================================= -->
+
+<section id="values"
+         class="py-24
+                bg-gray-50">
+
+    <div class="max-w-7xl
+                mx-auto
+                px-5
+                lg:px-8">
+
+        <div class="text-center
+                    max-w-2xl
+                    mx-auto">
+
+            <span class="text-indigo-600
+                         font-bold
+                         uppercase
+                         text-sm
+                         tracking-widest">
+
+                What Drives Us
+
+            </span>
+
+
+            <h2 class="text-4xl
+                       font-black
+                       mt-4">
+
+                Our Core Values
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="grid
+                    sm:grid-cols-2
+                    lg:grid-cols-4
+                    gap-6
+                    mt-14">
+
+
+            <!-- Value -->
+
+            <div class="bg-white
+                        rounded-2xl
+                        p-7
+                        border
+                        border-gray-100
+                        hover:-translate-y-2
+                        hover:shadow-xl
+                        transition">
+
+                <div class="w-14 h-14
+                            rounded-2xl
+                            bg-indigo-100
+                            text-indigo-600
+                            flex
+                            items-center
+                            justify-center
+                            text-xl">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+
+                <h3 class="text-xl
+                           font-bold
+                           mt-6">
+
+                    Innovation
+
+                </h3>
+
+
+                <p class="text-gray-500
+                          mt-3
+                          leading-7">
+
+                    We continuously explore new ideas and
+                    technologies to create better solutions.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="bg-white
+                        rounded-2xl
+                        p-7
+                        border
+                        border-gray-100
+                        hover:-translate-y-2
+                        hover:shadow-xl
+                        transition">
+
+                <div class="w-14 h-14
+                            rounded-2xl
+                            bg-purple-100
+                            text-purple-600
+                            flex
+                            items-center
+                            justify-center
+                            text-xl">
+
+                    <i class="fa-solid fa-gem"></i>
+
+                </div>
+
+
+                <h3 class="text-xl
+                           font-bold
+                           mt-6">
+
+                    Quality
+
+                </h3>
+
+
+                <p class="text-gray-500
+                          mt-3
+                          leading-7">
+
+                    We never compromise on quality, performance
+                    or attention to detail.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="bg-white
+                        rounded-2xl
+                        p-7
+                        border
+                        border-gray-100
+                        hover:-translate-y-2
+                        hover:shadow-xl
+                        transition">
+
+                <div class="w-14 h-14
+                            rounded-2xl
+                            bg-pink-100
+                            text-pink-600
+                            flex
+                            items-center
+                            justify-center
+                            text-xl">
+
+                    <i class="fa-solid fa-handshake"></i>
+
+                </div>
+
+
+                <h3 class="text-xl
+                           font-bold
+                           mt-6">
+
+                    Integrity
+
+                </h3>
+
+
+                <p class="text-gray-500
+                          mt-3
+                          leading-7">
+
+                    We believe in honest communication and
+                    transparent relationships.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="bg-white
+                        rounded-2xl
+                        p-7
+                        border
+                        border-gray-100
+                        hover:-translate-y-2
+                        hover:shadow-xl
+                        transition">
+
+                <div class="w-14 h-14
+                            rounded-2xl
+                            bg-green-100
+                            text-green-600
+                            flex
+                            items-center
+                            justify-center
+                            text-xl">
+
+                    <i class="fa-solid fa-people-group"></i>
+
+                </div>
+
+
+                <h3 class="text-xl
+                           font-bold
+                           mt-6">
+
+                    Teamwork
+
+                </h3>
+
+
+                <p class="text-gray-500
+                          mt-3
+                          leading-7">
+
+                    We work together with our clients to turn
+                    challenges into opportunities.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     OUR PROCESS
+========================================================= -->
+
+<section class="py-24">
+
+    <div class="max-w-7xl
+                mx-auto
+                px-5
+                lg:px-8">
+
+        <div class="text-center
+                    max-w-2xl
+                    mx-auto">
+
+            <span class="text-indigo-600
+                         font-bold
+                         uppercase
+                         text-sm
+                         tracking-widest">
+
+                How We Work
+
+            </span>
+
+
+            <h2 class="text-4xl
+                       font-black
+                       mt-4">
+
+                Simple Process,
+                <span class="gradient-text">
+                    Powerful Results
+                </span>
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="grid
+                    md:grid-cols-4
+                    gap-6
+                    mt-14">
+
+
+            <div class="relative">
+
+                <div class="w-16 h-16
+                            rounded-2xl
+                            bg-indigo-600
+                            text-white
+                            flex
+                            items-center
+                            justify-center
+                            text-xl
+                            font-bold">
+
+                    01
+
+                </div>
+
+
+                <h3 class="font-bold
+                           text-xl
+                           mt-6">
+
+                    Discover
+
+                </h3>
+
+
+                <p class="text-gray-500
+                          mt-3
+                          leading-7">
+
+                    We understand your goals, audience and
+                    business challenges.
+
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <div class="w-16 h-16
+                            rounded-2xl
+                            bg-purple-600
+                            text-white
+                            flex
+                            items-center
+                            justify-center
+                            text-xl
+                            font-bold">
+
+                    02
+
+                </div>
+
+
+                <h3 class="font-bold
+                           text-xl
+                           mt-6">
+
+                    Strategy
+
+                </h3>
+
+
+                <p class="text-gray-500
+                          mt-3
+                          leading-7">
+
+                    We create a clear strategy and roadmap
+                    for your project.
+
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <div class="w-16 h-16
+                            rounded-2xl
+                            bg-pink-600
+                            text-white
+                            flex
+                            items-center
+                            justify-center
+                            text-xl
+                            font-bold">
+
+                    03
+
+                </div>
+
+
+                <h3 class="font-bold
+                           text-xl
+                           mt-6">
+
+                    Build
+
+                </h3>
+
+
+                <p class="text-gray-500
+                          mt-3
+                          leading-7">
+
+                    Our team designs and develops your
+                    digital solution.
+
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <div class="w-16 h-16
+                            rounded-2xl
+                            bg-green-600
+                            text-white
+                            flex
+                            items-center
+                            justify-center
+                            text-xl
+                            font-bold">
+
+                    04
+
+                </div>
+
+
+                <h3 class="font-bold
+                           text-xl
+                           mt-6">
+
+                    Grow
+
+                </h3>
+
+
+                <p class="text-gray-500
+                          mt-3
+                          leading-7">
+
+                    We optimize, support and help your
+                    business grow.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TEAM
+========================================================= -->
+
+<section id="team"
+         class="py-24
+                bg-gray-50">
+
+    <div class="max-w-7xl
+                mx-auto
+                px-5
+                lg:px-8">
+
+
+        <div class="text-center">
+
+            <span class="text-indigo-600
+                         font-bold
+                         uppercase
+                         text-sm
+                         tracking-widest">
+
+                Our Team
+
+            </span>
+
+
+            <h2 class="text-4xl
+                       font-black
+                       mt-4">
+
+                Meet The People
+                <span class="gradient-text">
+                    Behind BrandX
+                </span>
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="grid
+                    sm:grid-cols-2
+                    lg:grid-cols-4
+                    gap-6
+                    mt-14">
+
+
+            <!-- Member -->
+
+            <div class="bg-white
+                        rounded-2xl
+                        overflow-hidden
+                        border
+                        border-gray-100
+                        group">
+
+                <div class="h-64
+                            bg-gradient-to-br
+                            from-indigo-500
+                            to-purple-600
+                            flex
+                            items-center
+                            justify-center">
+
+                    <div class="w-28 h-28
+                                rounded-full
+                                bg-white/20
+                                border-4
+                                border-white/30
+                                flex
+                                items-center
+                                justify-center
+                                text-white
+                                text-4xl">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-6 text-center">
+
+                    <h3 class="font-bold text-lg">
+                        Alex Johnson
+                    </h3>
+
+                    <p class="text-indigo-600
+                              text-sm
+                              mt-1">
+
+                        Founder & CEO
+
+                    </p>
+
+
+                    <div class="flex
+                                justify-center
+                                gap-3
+                                mt-4">
+
+                        <a href="#"
+                           class="text-gray-400
+                                  hover:text-indigo-600">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+                        <a href="#"
+                           class="text-gray-400
+                                  hover:text-indigo-600">
+
+                            <i class="fa-brands fa-x-twitter"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="bg-white
+                        rounded-2xl
+                        overflow-hidden
+                        border
+                        border-gray-100">
+
+                <div class="h-64
+                            bg-gradient-to-br
+                            from-purple-500
+                            to-pink-600
+                            flex
+                            items-center
+                            justify-center">
+
+                    <div class="w-28 h-28
+                                rounded-full
+                                bg-white/20
+                                border-4
+                                border-white/30
+                                flex
+                                items-center
+                                justify-center
+                                text-white
+                                text-4xl">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-6 text-center">
+
+                    <h3 class="font-bold text-lg">
+                        Sarah Wilson
+                    </h3>
+
+                    <p class="text-purple-600
+                              text-sm
+                              mt-1">
+
+                        Creative Director
+
+                    </p>
+
+
+                    <div class="flex
+                                justify-center
+                                gap-3
+                                mt-4">
+
+                        <a href="#"
+                           class="text-gray-400
+                                  hover:text-purple-600">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+                        <a href="#"
+                           class="text-gray-400
+                                  hover:text-purple-600">
+
+                            <i class="fa-brands fa-x-twitter"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="bg-white
+                        rounded-2xl
+                        overflow-hidden
+                        border
+                        border-gray-100">
+
+                <div class="h-64
+                            bg-gradient-to-br
+                            from-pink-500
+                            to-orange-500
+                            flex
+                            items-center
+                            justify-center">
+
+                    <div class="w-28 h-28
+                                rounded-full
+                                bg-white/20
+                                border-4
+                                border-white/30
+                                flex
+                                items-center
+                                justify-center
+                                text-white
+                                text-4xl">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-6 text-center">
+
+                    <h3 class="font-bold text-lg">
+                        Michael Brown
+                    </h3>
+
+                    <p class="text-pink-600
+                              text-sm
+                              mt-1">
+
+                        Lead Developer
+
+                    </p>
+
+
+                    <div class="flex
+                                justify-center
+                                gap-3
+                                mt-4">
+
+                        <a href="#"
+                           class="text-gray-400
+                                  hover:text-pink-600">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+                        <a href="#"
+                           class="text-gray-400
+                                  hover:text-pink-600">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="bg-white
+                        rounded-2xl
+                        overflow-hidden
+                        border
+                        border-gray-100">
+
+                <div class="h-64
+                            bg-gradient-to-br
+                            from-green-500
+                            to-teal-600
+                            flex
+                            items-center
+                            justify-center">
+
+                    <div class="w-28 h-28
+                                rounded-full
+                                bg-white/20
+                                border-4
+                                border-white/30
+                                flex
+                                items-center
+                                justify-center
+                                text-white
+                                text-4xl">
+
+                        <i class="fa-solid fa-user"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="p-6 text-center">
+
+                    <h3 class="font-bold text-lg">
+                        Emma Davis
+                    </h3>
+
+                    <p class="text-green-600
+                              text-sm
+                              mt-1">
+
+                        Marketing Strategist
+
+                    </p>
+
+
+                    <div class="flex
+                                justify-center
+                                gap-3
+                                mt-4">
+
+                        <a href="#"
+                           class="text-gray-400
+                                  hover:text-green-600">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+                        <a href="#"
+                           class="text-gray-400
+                                  hover:text-green-600">
+
+                            <i class="fa-brands fa-x-twitter"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="py-24">
+
+    <div class="max-w-6xl
+                mx-auto
+                px-5
+                lg:px-8">
+
+        <div class="relative
+                    overflow-hidden
+                    rounded-3xl
+                    bg-gradient-to-br
+                    from-indigo-600
+                    via-purple-600
+                    to-pink-600
+                    p-10
+                    md:p-16
+                    text-center">
+
+
+            <div class="absolute
+                        -top-20
+                        -left-20
+                        w-72
+                        h-72
+                        rounded-full
+                        bg-white/10
+                        blur-3xl">
+            </div>
+
+
+            <div class="absolute
+                        -bottom-20
+                        -right-20
+                        w-72
+                        h-72
+                        rounded-full
+                        bg-white/10
+                        blur-3xl">
+            </div>
+
+
+            <div class="relative">
+
+                <h2 class="text-4xl
+                           md:text-5xl
+                           font-black
+                           text-white">
+
+                    Let's Build Something
+                    <br class="hidden md:block">
+                    Amazing Together
+
+                </h2>
+
+
+                <p class="text-white/80
+                          max-w-2xl
+                          mx-auto
+                          mt-5
+                          leading-7">
+
+                    Have an idea or project in mind?
+                    Let's talk about how we can help you
+                    turn it into reality.
+
+                </p>
+
+
+                <a href="index.html#contact"
+                   class="inline-flex
+                          items-center
+                          gap-2
+                          mt-8
+                          px-7 py-3.5
+                          bg-white
+                          text-indigo-700
+                          rounded-xl
+                          font-bold
+                          hover:bg-gray-100
+                          transition">
+
+                    Start A Conversation
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="bg-gray-950 text-white">
+
+    <div class="max-w-7xl
+                mx-auto
+                px-5
+                lg:px-8
+                py-14">
+
+        <div class="grid
+                    md:grid-cols-2
+                    lg:grid-cols-4
+                    gap-10">
+
+
+            <!-- Brand -->
+
+            <div>
+
+                <a href="index.html"
+                   class="flex items-center gap-3">
+
+                    <div class="w-10 h-10
+                                rounded-xl
+                                bg-indigo-600
+                                flex
+                                items-center
+                                justify-center">
+
+                        <i class="fa-solid fa-rocket"></i>
+
+                    </div>
+
+                    <span class="text-xl font-bold">
+                        BrandX
+                    </span>
+
+                </a>
+
+
+                <p class="text-gray-400
+                          leading-7
+                          mt-5">
+
+                    Creating powerful digital experiences
+                    for modern businesses.
+
+                </p>
+
+
+                <div class="flex gap-3 mt-6">
+
+                    <a href="#"
+                       class="w-10 h-10
+                              rounded-lg
+                              bg-white/10
+                              hover:bg-indigo-600
+                              flex
+                              items-center
+                              justify-center
+                              transition">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                       class="w-10 h-10
+                              rounded-lg
+                              bg-white/10
+                              hover:bg-indigo-600
+                              flex
+                              items-center
+                              justify-center
+                              transition">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                       class="w-10 h-10
+                              rounded-lg
+                              bg-white/10
+                              hover:bg-indigo-600
+                              flex
+                              items-center
+                              justify-center
+                              transition">
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+
+                    <a href="#"
+                       class="w-10 h-10
+                              rounded-lg
+                              bg-white/10
+                              hover:bg-indigo-600
+                              flex
+                              items-center
+                              justify-center
+                              transition">
+
+                        <i class="fa-brands fa-youtube"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Company -->
+
+            <div>
+
+                <h3 class="font-bold text-lg">
+                    Company
+                </h3>
+
+
+                <ul class="mt-5
+                           space-y-3
+                           text-gray-400">
+
+                    <li>
+                        <a href="index.html"
+                           class="hover:text-white transition">
+
+                            Home
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="about.html"
+                           class="hover:text-white transition">
+
+                            About Us
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#mission"
+                           class="hover:text-white transition">
+
+                            Mission
+
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#team"
+                           class="hover:text-white transition">
+
+                            Our Team
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- Services -->
+
+            <div>
+
+                <h3 class="font-bold text-lg">
+                    Services
+                </h3>
+
+
+                <ul class="mt-5
+                           space-y-3
+                           text-gray-400">
+
+                    <li>
+                        Web Development
+                    </li>
+
+                    <li>
+                        UI/UX Design
+                    </li>
+
+                    <li>
+                        Digital Marketing
+                    </li>
+
+                    <li>
+                        SEO Optimization
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- Contact -->
+
+            <div>
+
+                <h3 class="font-bold text-lg">
+                    Contact
+                </h3>
+
+
+                <ul class="mt-5
+                           space-y-4
+                           text-gray-400">
+
+                    <li class="flex gap-3">
+
+                        <i class="fa-solid
+                                  fa-location-dot
+                                  text-indigo-400
+                                  mt-1">
+                        </i>
+
+                        <span>
+                            Dhaka, Bangladesh
+                        </span>
+
+                    </li>
+
+
+                    <li class="flex gap-3">
+
+                        <i class="fa-solid
+                                  fa-envelope
+                                  text-indigo-400
+                                  mt-1">
+                        </i>
+
+                        <span>
+                            hello@example.com
+                        </span>
+
+                    </li>
+
+
+                    <li class="flex gap-3">
+
+                        <i class="fa-solid
+                                  fa-phone
+                                  text-indigo-400
+                                  mt-1">
+                        </i>
+
+                        <span>
+                            +880 1000 000000
+                        </span>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Bottom -->
+
+        <div class="border-t
+                    border-white/10
+                    mt-12
+                    pt-7
+                    flex
+                    flex-col
+                    md:flex-row
+                    justify-between
+                    gap-4
+                    text-sm
+                    text-gray-500">
+
+            <p>
+                © 2026 BrandX. All rights reserved.
+            </p>
+
+
+            <div class="flex gap-6">
+
+                <a href="#"
+                   class="hover:text-white">
+
+                    Privacy Policy
+
+                </a>
+
+
+                <a href="#"
+                   class="hover:text-white">
+
+                    Terms & Conditions
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+    const menuBtn = document.getElementById('menuBtn');
+
+    const mobileMenu =
+        document.getElementById('mobileMenu');
+
+
+    menuBtn.addEventListener('click', () => {
+
+        mobileMenu.classList.toggle('hidden');
+
+
+        const icon =
+            menuBtn.querySelector('i');
+
+
+        if (mobileMenu.classList.contains('hidden')) {
+
+            icon.classList.remove('fa-xmark');
+
+            icon.classList.add('fa-bars');
+
+        } else {
+
+            icon.classList.remove('fa-bars');
+
+            icon.classList.add('fa-xmark');
+
+        }
+
+    });
+
+
+    // Close menu after clicking links
+
+    document
+        .querySelectorAll('#mobileMenu a')
+        .forEach(link => {
+
+            link.addEventListener('click', () => {
+
+                mobileMenu.classList.add('hidden');
+
+                const icon =
+                    menuBtn.querySelector('i');
+
+                icon.classList.remove('fa-xmark');
+
+                icon.classList.add('fa-bars');
+
+            });
+
+        });
+
+</script>
+
+</body>
+</html>
